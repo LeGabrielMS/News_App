@@ -21,7 +21,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(this.binding.root)
 
         // Mengarahkan pengguna untuk pindah ke LoginActivity saat TextView "Sudah punya akun?" diklik
-        binding.tvLogin.setOnClickListener {
+        this.binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -70,7 +70,7 @@ class RegisterActivity : AppCompatActivity() {
 
     // Fungsi untuk mendaftarkan pengguna baru ke Firebase Authentication
     private fun registerFirebase(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
+        this.auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     // Jika pendaftaran berhasil, log pesan dan tampilkan toast
