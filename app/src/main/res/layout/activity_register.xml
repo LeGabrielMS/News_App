@@ -12,6 +12,7 @@
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:contentDescription="@string/logo"
         android:padding="10dp"
         android:src="@drawable/news_4301" />
 
@@ -37,14 +38,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:hint="@string/prompt_email" />
+            android:autofillHints="emailAddress"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/passwordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:hint="@string/prompt_password" />
+            android:autofillHints="password"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/buttonRegister"

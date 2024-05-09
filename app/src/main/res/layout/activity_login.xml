@@ -13,7 +13,8 @@
         android:layout_centerInParent="true"
         android:background="@drawable/shape"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="10dp"
+        tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="match_parent"
@@ -29,14 +30,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:hint="@string/prompt_email" />
+            android:autofillHints="emailAddress"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/passwordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:hint="@string/prompt_password" />
+            android:autofillHints="password"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/buttonLogin"
