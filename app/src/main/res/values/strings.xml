@@ -13,14 +13,19 @@
     <string name="no_account">Belum punya akun?</string>
     <string name="have_account">Sudah punya akun?</string>
 
+    <!-- AboutMe -->
+    <string name="about_me">About Me</string>
+    <string name="nama">Gabriel Marcellino Sinurat</string>
+    <string name="nim">22552011043</string>
+    <string name="kelas">TIF RM - 222MB Online</string>
+    <string name="tugas">Aplikasi ini dibuat untuk memenuhi \nTugas Besar UTS Mata Kuliah \nPemrograman Mobile 1 \ndi Universitas Teknologi Bandung</string>
+
     <!--News-->
-    <string name="profileIcon">Profile Icon</string>
     <string name="menu_terbaru">Baca Berita Terbaru Hanya Di NewsApp!</string>
     <string name="var_contdesc">contdesc</string>
     <string name="judul_headline">Judul Headline</string>
     <string name="tanggal_headline">Tanggal: </string>"
     <string name="home">Home</string>
-    <string name="About">About Me</string>
     <string name="judul_berita">Judul Berita</string>
     <string name="tanggal">Tanggal</string>
 

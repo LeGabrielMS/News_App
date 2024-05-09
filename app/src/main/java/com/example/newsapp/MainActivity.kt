@@ -8,16 +8,21 @@ import com.example.newsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    // Deklarasi variabel binding untuk mengakses tata letak XML
     private lateinit var binding: ActivityMainBinding
+
+    // Deklarasi adapter dan dataArrayList untuk daftar berita
     private lateinit var newsAdapter: ListAdapter
     private lateinit var listData: ListData
     private var dataArrayList = ArrayList<ListData?>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Inflate layout menggunakan binding
         this.binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(this.binding.root)
 
+        // Daftar gambar, orang, konten, judul, dan tanggal untuk setiap berita
         val gambarList = intArrayOf(
             R.drawable.img_news1,
             R.drawable.img_news2,
@@ -53,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             "Selasa, 15 Agustus 2023 - 17:40 WIB"
         )
 
+        // Memasukkan data berita ke dalam dataArrayList
         for (i in gambarList.indices) {
             this.listData = ListData(
                 judulList[i],
@@ -64,17 +70,26 @@ class MainActivity : AppCompatActivity() {
             this.dataArrayList.add(listData)
         }
 
+        // Inisialisasi dan mengatur adapter untuk ListView
         this.newsAdapter = ListAdapter(this@MainActivity, this.dataArrayList)
-        this.binding.rcvDaftarBerita.adapter = this.newsAdapter
-        this.binding.rcvDaftarBerita.isClickable = true
+        this.binding.lvDaftarBerita.adapter = this.newsAdapter
+        this.binding.lvDaftarBerita.isClickable = true
 
-        this.binding.rcvDaftarBerita.onItemClickListener = OnItemClickListener { _, _, i, _ ->
+        // Menangani klik item dalam ListView untuk membuka DetailActivity
+        this.binding.lvDaftarBerita.onItemClickListener = OnItemClickListener { _, _, i, _ ->
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
+            // Menyampaikan data berita yang dipilih ke DetailActivity
             intent.putExtra("judul", judulList[i])
             intent.putExtra("tanggal", tanggalList[i])
             intent.putExtra("orang", orangList[i])
             intent.putExtra("konten", kontenList[i])
             intent.putExtra("gambar", gambarList[i])
+            startActivity(intent)
+        }
+
+        // Menangani klik gambar profil untuk membuka AboutActivity
+        this.binding.imgProfile.setOnClickListener {
+            val intent = Intent(this@MainActivity, AboutActivity::class.java)
             startActivity(intent)
         }
     }
