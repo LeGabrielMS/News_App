@@ -44,7 +44,7 @@
             android:layout_height="32dp"
             android:layout_marginTop="12dp"
             android:indeterminate="true"
-            android:indeterminateTint="@color/primary"
+            android:indeterminateTint="@color/dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/titleSplash" />
