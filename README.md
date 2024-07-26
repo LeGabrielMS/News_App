@@ -1,1 +1,12 @@
-Link Google Drive: https://drive.google.com/drive/folders/1VRKrx0dIhOT-hHj40NI8VXJjArCnwUM7?usp=sharing
+Nama: Gabriel Marcellino Sinurat
+NIM: 22552011043
+Kelas: TIF RM - 222MB Online
+
+Aplikasi Ini Dibuat Guna Memenuhi Tugas Besar Ujian Akhir Semester.
+Mata Kuliah: Pemrograman Mobile 1
+Di Universitas Teknologi Bandung.
+____________________________________________________________________________
+
+Project Aplikasi Ini Melanjutkan Dari Tugas Project Ujian Tengah Semester.
+
+Link Google Drive: https://drive.google.com/drive/folders/18XPh3Cy7zR-dvc8Xut8TjZ5TKgw75htd?usp=sharing
