@@ -2,44 +2,102 @@ package com.example.newsapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.newsapp.databinding.ActivityDetailBinding
+import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class DetailActivity : AppCompatActivity() {
+    private lateinit var newsTitle: TextView
+    private lateinit var newsSubtitle: TextView
+    private lateinit var newsImage: ImageView
 
-    // Variabel binding untuk mengakses tata letak XML
-    private lateinit var binding: ActivityDetailBinding
+    private lateinit var edit: Button
+    private lateinit var hapus: Button
+    private lateinit var db: FirebaseFirestore
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Inflate layout menggunakan binding
-        this.binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(this.binding.root)
+        setContentView(R.layout.activity_detail)
 
-        // Mendapatkan intent dari Activity sebelumnya
+        //inisialisasi UI Components
+        newsTitle = findViewById(R.id.newsTitle)
+        newsSubtitle = findViewById(R.id.newsSubtitle)
+        newsImage = findViewById(R.id.newsImage)
+        edit = findViewById(R.id.editButton)
+        hapus = findViewById(R.id.deleteButton)
+
+        //inisialisasi Firebase
+        db = FirebaseFirestore.getInstance()
+        mAuth = FirebaseAuth.getInstance()
+
+        //get data from intent
         val intent = this.intent
-        if (intent != null) {
-            // Mendapatkan data berita dari intent
-            val judul = intent.getStringExtra("judul")
-            val tanggal = intent.getStringExtra("tanggal")
-            val orang = intent.getIntExtra("orang", R.string.timRedaksi1)
-            val konten = intent.getIntExtra("konten", R.string.kontenBerita1)
-            val gambar = intent.getIntExtra("gambar", R.drawable.img_news1)
+        val id = intent.getStringExtra("id")
+        val title = intent.getStringExtra("title")
+        val subtitle = intent.getStringExtra("desc")
+        val imageUrl = intent.getStringExtra("imageUrl")
 
-            // Menampilkan data berita ke UI
-            this.binding.txtTitleNews.text = judul
-            this.binding.txtPostTime.text = tanggal
-            this.binding.txtReporter.setText(orang)
-            this.binding.txtKontenNews.setText(konten)
-            this.binding.imgToolbar.setImageResource(gambar)
-        }
+        //set data to UI Components
+        newsTitle.text = title
+        newsSubtitle.text = subtitle
+        Glide.with(this).load(imageUrl).into(newsImage)
 
         // Menangani klik tombol kembali
-        this.binding.btnBack.setOnClickListener {
-            // Membuat intent untuk kembali ke MainActivity
-            val backIntent = Intent(this, MainActivity::class.java)
-            startActivity(backIntent) // Memulai Activity MainActivity
-            finish() // Menutup Activity saat ini (DetailActivity)
+        val back = findViewById<ImageView>(R.id.btnBack)
+        back.setOnClickListener {
+            val backIntent = Intent(this@DetailActivity, MainActivity::class.java)
+            startActivity(backIntent)
+            finish()
+        }
+
+        //edit news
+        edit.setOnClickListener {
+            val editIntent = Intent(this@DetailActivity, NewsAdd::class.java).apply {
+                putExtra("id", id)
+                putExtra("title", title)
+                putExtra("desc", subtitle)
+                putExtra("imageUrl", imageUrl)
+            }
+            startActivity(editIntent)
+            finish()
+        }
+
+        //delete news
+        hapus.setOnClickListener {
+            id?.let { documentId ->
+                db.collection("news")
+                    .document(documentId)
+                    .delete()
+                    .addOnSuccessListener {
+                        Toast.makeText(
+                            this@DetailActivity,
+                            "News Deleted Succesfully",
+                            Toast.LENGTH_LONG
+                        ).show()
+
+                        // Redirect to MainActivity
+                        val mainIntent = Intent(this, MainActivity::class.java).apply {
+                            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        }
+                        startActivity(mainIntent)
+                        finish()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(
+                            this@DetailActivity,
+                            "Failed to delete news: ${e.message}",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        Log.w("News Detail, Error Deleting Document", e)
+                    }
+            }
         }
     }
 }

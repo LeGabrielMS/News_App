@@ -13,68 +13,21 @@
     <string name="no_account">Belum punya akun?</string>
     <string name="have_account">Sudah punya akun?</string>
 
+    <string name="default_web_client_id">31790483395-u2gqk2o9soe6j16fnf8b6ai9b1lpjbk4.apps.googleusercontent.com</string>
+
     <!-- AboutMe -->
     <string name="about_me">About Me</string>
     <string name="nama">Gabriel Marcellino Sinurat</string>
     <string name="nim">22552011043</string>
     <string name="kelas">TIF RM - 222MB Online</string>
-    <string name="tugas">Aplikasi ini dibuat untuk memenuhi \nTugas Besar UTS Mata Kuliah \nPemrograman Mobile 1 \ndi Universitas Teknologi Bandung</string>
+    <string name="tugas">Aplikasi ini dibuat untuk memenuhi \nTugas Besar UAS Mata Kuliah \nPemrograman Mobile 1 \ndi Universitas Teknologi Bandung</string>
 
     <!--News-->
     <string name="menu_terbaru">Baca Berita Terbaru Hanya Di NewsApp!</string>
     <string name="var_contdesc">contdesc</string>
     <string name="judul_headline">Judul Headline</string>
-    <string name="tanggal_headline">Tanggal: </string>"
+    <string name="deskripsi_headline">Deskripsi: </string>"
     <string name="home">Home</string>
     <string name="judul_berita">Judul Berita</string>
-    <string name="tanggal">Tanggal</string>
-
-    <!--Dump Berita-->
-
-    <!--Berita 1-->
-    <string name="timRedaksi1">Achmad Faizal, Farid Assifa.</string>
-    <string name="kontenBerita1">
-        Warga Madura, Jawa Timur, dihebohkan dengan tayangan film pendek "Guru Tugas" di akun Youtube beberapa waktu terakhir. Film tersebut mengundang pro kontra karena dianggap mencoreng dunia pendidikan pesantren.
-        \n\nFilm pendek "Guru Tugas" yang diunggah akun Youtube Akeloy Production dalam beberapa episode itu menceritakan seorang guru agama dari pesantren di Kabupaten Jember yang bertugas di sebuah pesantren di Kabupaten Bangkalan. Guru pria tersebut lantas melakukan tindak asusila kepada murid perempuannya.
-        \n\nMerespons keresahan masyarakat itu, Subdit V Siber Ditreskrimsus Polda Jatim kemudian melakukan penyelidikan dengan menerbitkan Laporan Polisi Model B Nomor 236/2024 SPKT Polda Jawa Timur.
-        \n\nTiga orang pembuat film pendek itu pun ditangkap dan diperiksa di Polda Jatim. Ketiganya adalah S, Y, dan A.
-        \n\n"Sampai saat ini ketiga orang tersebut masih diperiksa penyidik di Polda Jatim," katanya kepada wartawan di Polda Jatim, Rabu (8/5/2024).
-        \n\nDi wilayah Madura, praktik guru tugas sudah lama dikenal. Pesantren dari daerah lain menugaskan santrinya yang dianggap sudah mumpuni secara keilmuan untuk mengabdi kepada masyarakat mengajarkan ilmu yang didapatnya dari pesantren ke daerah lain.
-        \n\n"Kelompok ormas NU Madura, tokoh agama, kelompok ulama, tokoh pesantren dan ormas keagamaan lainnya memprotes tayangan tersebut karena membangun citra negatif terhadap guru tugas," jelasnya.
-        \n\nTokoh agama yang memprotes video itu, menurut Dirmanto, juga menyayangkan di tayangan tersebut sama sekali tidak menampilkan sosok positif guru tugas, namun yang ditampilkan hanya sosok negatifnya saja.
-    </string>
-
-    <!--Berita 2-->
-    <string name="timRedaksi2">Jamil Azali, Firda Jumardi.</string>
-    <string name="kontenBerita2">
-        Diduga akibat hubungan arus pendek listrik, sebuah rumah lantai dua di lingkungan Kanakea, Kota Baubau, Sulawesi Tenggara, terbakar hebat pada Kamis (29/2/2024) pagi tadi.
-        \n\nDua penghuni rumah yang sedang tertidur lelap nyaris terpanggang api. Kobaran api dengan cepat membakar seluruh bangunan sebuah rumah dua lantai yang berlokasi di lingkungan kanakea, Kecamatan Batupoaro, Kota Baubau.
-        \n\nKebakaran yang terjadi pada pukul 05. WITA pagi di tengah pemukiman padat tersebut membuat panik warga. Bangunan rumah yang sebagian besar materialnya terbuat dari kayu membuat api dengan cepat membakar seluruh bangunan.
-        \n\nMenurut kesaksian sejumlah warga, peristiwa kebakaran ini bermula saat warga mencium bau material yang terbakar kemudian api terlihat berasal dari lantai dua bangunan yang diduga akibat korsleting listrik.
-        \n\nSementara dua penghuni rumah sedang tertidur lelap di lantai bawah saat api sudah berkobar. Kedua penghuni rumah tersebut nyaris terpanggang api, beruntung warga yang mengetahui keberadaan mereka langsung mendobrak pintu kamar dan mengevakuasi keduanya.
-        \n\n"Ada dua orang yang tinggal di rumah itu adik Kaka, mereka masih tidur di lantai bawah waktu kebakaran jadi warga terobos masuk ke dalam rumah mereka belum bangun juga itu, nanti didobrak pintu kamarnya, itupun mereka belum terlalu sadar, " ungkap Melda, salah satu warga Kanakea.
-        \n\nEnam unit mobil pemadam kebakaran dari Dinas Damkar Kota Baubau, diterjunkan untuk memadamkan api. Warga turut membantu petugas damkar untuk mempercepat proses pemadaman api.
-    </string>
-
-    <!--Berita 3-->
-    <string name="timRedaksi3">Tim TvOne, Mumu Mujaidin.</string>
-    <string name="kontenBerita3">
-        Sebuah rumah di Pisangan, RT/RW 005/004, Ciputat Timur, Kota Tangerang Selatan (Tangsel), Banten, ludes terbakar, Sabtu (16/3/2024).
-        \n\nKebakaran tersebut mengakibatkan satu penghuni tewas saat terlelap tidur di dalam kamarnya. Komandan Peleton Tim Damkar Kota Tangsel, Imam di Tangerang, Sabtu menyampaikan bahwa korban tewas terbakar karena terjebak di kamar dengan kondisi asap tebal.
-        \n\nMenurutnya, kebakaran yang terjadi sekitar pukul 09.30 WIB itu disebabkan arus pendek listrik (korsleting).
-        \n\n“Jenis yg terbakar rumah tinggal.korban jiwa satu orang meninggal," ucapnya.
-        \nDalam menangani kebakaran tersebut, pihaknya mengerahkan lima unit armada dengan belasan personel untuk memadamkan si jago merah yang menghanguskan rumah tersebut.
-    </string>
-
-    <!--Berita 4-->
-    <string name="timRedaksi4">Tim TvOne, Bajo Winarno.</string>
-    <string name="kontenBerita4">
-        Juru bicara Detasemen Khusus (Densus) 88 Antiteror Polri Kombes Pol. Aswin Siregar menyebut tersangka dugaan tindak pidana terorisme DE memiliki kemampuan memodifikasi air guns (senapan angin) dan air soft guns menjadi senjata api penuh yang dapat melukai orang.
-        \n\nDari barang bukti senjata api yang disita di kediaman DE di Bekasi Utara, diamankan 16 senjata api yang terdiri atas 11 senjata laras pendek dan lima laras panjang. Dari ke-16 senjata tersebut ada yang rakitan dan ada yang pabrikan.
-        \n\n"Dari senjata api itu ada empat pabrikan dan lima modifikasi dari air gun menjadi senjata api penuh," kata Aswin di Mabes Polri, Jakarta, Selasa.
-        \n\nSelain belasan senjata api tersebut, penyidik juga menyita sebuah pen guns. Pulpen pistol atau pen guns ini bisa memuat satu peluru yang dapat digunakan untuk menembak dari jarak dekat.
-        \n\nMenurut Aswin, penyidik tengah mendalami dan mempelajari bagaimana cara DE memodifikasi air guns dan air soft guns itu bisa menjadi senjata api penuh.
-        \n\n"Ada mekanisme yang diubah oleh DE. Ini sedang dipelajari oleh penyidik Densus 88 Antiteror juga," ucap Aswin.
-    </string>
 
 </resources>

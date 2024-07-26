@@ -8,7 +8,7 @@ import com.example.newsapp.databinding.ActivityAboutBinding
 class AboutActivity : AppCompatActivity() {
 
     // Deklarasi variabel binding untuk mengakses tata letak XML
-    private lateinit var binding : ActivityAboutBinding
+    private lateinit var binding: ActivityAboutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

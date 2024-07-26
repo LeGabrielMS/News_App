@@ -31,7 +31,7 @@
                     android:contentDescription="@string/var_contdesc"
                     android:scaleType="centerCrop"
                     android:scrollbarAlwaysDrawHorizontalTrack="false"
-                    app:srcCompat="@drawable/img_news2" />
+                    app:srcCompat="@mipmap/ic_launcher" />
 
             </androidx.cardview.widget.CardView>
 
@@ -50,12 +50,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvw_Tanggal"
+                android:id="@+id/tvw_Deskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/tanggal_headline"
+                android:text="@string/deskripsi_headline"
                 android:textSize="11sp"
                 app:layout_constraintStart_toEndOf="@id/cvw_ImgNews"
                 app:layout_constraintTop_toBottomOf="@id/tvw_title" />

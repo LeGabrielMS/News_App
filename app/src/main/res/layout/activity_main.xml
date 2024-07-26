@@ -63,7 +63,7 @@
     <!--endregion-->
 
     <!--region news-->
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lv_daftar_berita"
         android:layout_width="match_parent"
         android:layout_height="@+id/lay_MenuTop"
@@ -76,6 +76,18 @@
         app:layout_constraintTop_toBottomOf="@+id/lay_MenuTop"
         tools:listitem="@layout/lay_berita" />
     <!--endregion-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatAddNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/add_43"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bnv_menubottom"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:ignore="ContentDescription" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_menubottom"
